@@ -21,6 +21,77 @@ You will need to contact either contact your 'Lenovo Account Representative' or 
 
 ### Example
 
+#### Setup
+
+Need to create it's own function
+
+```powershell
+$lenovoApiKeyName = "LENOVO_API_KEY"
+$lenovoApiKey = "##ADD YOUR API KEY HERE##"
+[Environment]::SetEnvironmentVariable($lenovoApiKeyName, $lenovoApiKey, "Machine")
+```
+
+```powershell
+$global:ApiKey = [Environment]::GetEnvironmentVariable($lenovoApiKeyName, "Machine")
+```
+
+#### Warranty
+
+```powershell
+$Serial = "##YOUR SERIAL NUMBER##"
+$warranty = Get-WarrantyBySerial -Serial $Serial
+```
+
+```powershell
+$Serials = @("#x#","#y#")
+$warranties = Get-WarrantyBySerials -Serials $Serials
+```
+
+```powershell
+$WarrantyId = "#ID#"
+$warranty = Get-WarrantyById -Id $WarrantyId
+```
+
+```powershell
+$WarrantyIds = @("#a#","#b#")
+$warranties = Get-WarrantyByIds -Ids $WarrantyIds
+```
+
+```powershell
+$ContractId
+$contract = Get-ContractById -Id $ContractId
+```
+
+```powershell
+$Serial = "##YOUR SERIAL NUMBER##"
+$warrantyoptions = Get-WarrantyOptionsBySerial -Serial $Serial
+```
+
+This will return all the Countries to get the CountryCode for a subsequent request.
+
+```powershell
+$Serial = "##YOUR SERIAL NUMBER##"
+$CountryCode = "GB"
+$warrantyoptions = Get-WarrantyOptionsBySerialAndCountryCode -Serial $Serial -CountryCode $CountryCode
+```
+
+> Need to work out the different **Machine Types**
+
+```powershell
+$MachineType = "Laptop"
+$warrantyoptions = Get-WarrantyOptionsByMachineType -MachineType $MachineType
+```
+
+```powershell
+$MachineType = "Laptop"
+$CountryCode = "GB"
+$warrantyoptions = Get-WarrantyOptionsByMachineTypeAndCountryCode -MachineType $MachineType -CountryCode $CountryCode
+```
+
+---
+
+### Plain Powershell Example
+
 #### Warranty
 
 ```powershell
