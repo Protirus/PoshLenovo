@@ -19,6 +19,15 @@ You will need to contact either contact your 'Lenovo Account Representative' or 
 
 ---
 
+## Module Build Status
+
+| Branch | AzurePipelines CI                              |
+|--------|------------------------------------------------|
+| dev    | ![Azure Build Status: Dev][ap-image-dev]       |
+| master | ![Azure Build Status: Master][ap-image-master] |
+
+---
+
 ### Example
 
 #### Setup
@@ -126,3 +135,13 @@ Terminal (Mac)
 - https://pcsupport.lenovo.com/gb/en/warrantylookup/batchquery
 
 There are also a number of scripts which post data to the above website but the API is a cleaner way to do this.
+
+## Links
+
+- [GitHub Repository](https://github.com/Protirus/PoshLenovo)
+- [Website](https://www.protirus.com/)
+
+[ap-image-dev]: https://protirus.visualstudio.com/PoshLenovo/_apis/build/status/Protirus.PoshLenovo?branchName=dev
+[ap-site-dev]: https://dev.azure.com/dscottraynsford/GitHub/_build/latest?definitionId=4
+[ap-image-master]: https://protirus.visualstudio.com/PoshLenovo/_apis/build/status/Protirus.PoshLenovo?branchName=master
+[ap-site-master]: https://dev.azure.com/dscottraynsford/GitHub/_build/latest?definitionId=4
