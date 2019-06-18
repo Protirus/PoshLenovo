@@ -2,9 +2,9 @@
 
 ![Language: PowerShell](https://img.shields.io/badge/language-powershell-blue.svg)
 ![Tag: Lenovo](https://img.shields.io/badge/tag-lenovo-red.svg)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) | [![GitHub contributors](https://img.shields.io/github/contributors/AlexHedley/PoshLenovo.svg)](https://GitHub.com/AlexHedley/PoshLenovo/graphs/contributors/)
-[![GitHub issues](https://img.shields.io/github/issues/AlexHedley/PoshLenovo.svg)](https://GitHub.com/AlexHedley/PoshLenovo/issues/)
-[![GitHub issues-closed](https://img.shields.io/github/issues-closed/AlexHedley/PoshLenovo.svg)](https://GitHub.com/AlexHedley/PoshLenovo/issues?q=is%3Aissue+is%3Aclosed) | [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) | [![GitHub contributors](https://img.shields.io/github/contributors/AlexHedley/PoshLenovo.svg)](https://GitHub.com/Protirus/PoshLenovo/graphs/contributors/)
+[![GitHub issues](https://img.shields.io/github/issues/Protirus/PoshLenovo.svg)](https://GitHub.com/AlexHedley/PoshLenovo/issues/)
+[![GitHub issues-closed](https://img.shields.io/github/issues-closed/Protirus/PoshLenovo.svg)](https://GitHub.com/AlexHedley/PoshLenovo/issues?q=is%3Aissue+is%3Aclosed) | [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 
 A PowerShell module for [Lenovo](https://www.lenovo.com/gb/en/) API.
