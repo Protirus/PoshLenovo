@@ -44,6 +44,8 @@ $lenovoApiKey = "##ADD YOUR API KEY HERE##"
 $global:ApiKey = [Environment]::GetEnvironmentVariable($lenovoApiKeyName, "Machine")
 ```
 
+---
+
 #### Warranty
 
 ```powershell
@@ -97,7 +99,9 @@ $CountryCode = "GB"
 $warrantyoptions = Get-WarrantyOptionsByMachineTypeAndCountryCode -MachineType $MachineType -CountryCode $CountryCode
 ```
 
-#### Product
+---
+
+#### Catalog
 
 ```powershell
 $response = Get-Catalog -IncludeFutureProducts $true
@@ -133,6 +137,16 @@ $response = Get-Catalog-Children -ProductID $ProductID -IncludeFutureProducts $t
 $response
 #$response = Get-Catalog-Children -ProductID $ProductID
 #$response
+```
+
+---
+
+#### Product
+
+```powershell
+$Serial = "##YOUR SERIAL NUMBER##"
+$response = Get-Product -Serial $Serial
+$response
 ```
 
 ---

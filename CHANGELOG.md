@@ -15,3 +15,14 @@
   - Get-WarrantyOptionsBySerialAndCountryCode
   - Get-WarrantyOptionsByMachineType
   - Get-WarrantyOptionsByMachineTypeAndCountryCode
+
+## [0.0.2] - 2019-07-28
+### Added
+- Product Catalog Endpoints
+  - Get-Catalog
+  - Get-Catalog-Raw
+  - Get-Catalog-All
+  - Get-Catalog-Children
+
+- Product Information Endpoint(s)
+  - Get-Product
