@@ -90,6 +90,136 @@ function Get-Catalog
     {}
 }
 
+function Get-Catalog-Raw
+{
+    <#
+    .PARAMETER IncludeFutureProducts
+        If ApiMode=V, results include future products.
+    
+    .EXAMPLE
+        Get-Catalog-Raw -IncludeFutureProducts $true
+    #>
+
+    [CmdletBinding()]
+    param(
+        [bool]$IncludeFutureProducts
+    )
+
+    Begin
+    {}
+    Process
+    {
+        try
+        {
+            $resource += "Catalog/Raw"
+            $method = "GET"
+            if ($IncludeFutureProducts) {
+                $query = "ApiMode=V"
+            }
+
+            $response = Invoke-LenovoApiRequest -Method $method -Resource $resource -Query $query
+            return $response
+        }
+        catch
+        {
+            Write-Error $Error.item(0)
+            #Log-Message $Error.item(0) Debug
+        }
+        finally
+        {}
+    }
+    End
+    {}
+}
+
+function Get-Catalog-All
+{
+    <#
+    .PARAMETER IncludeFutureProducts
+        If ApiMode=V, results include future products.
+    
+    .EXAMPLE
+        Get-Catalog-All -IncludeFutureProducts $true
+    #>
+
+    [CmdletBinding()]
+    param(
+        [bool]$IncludeFutureProducts
+    )
+
+    Begin
+    {}
+    Process
+    {
+        try
+        {
+            $resource += "Catalog/All"
+            $method = "GET"
+            if ($IncludeFutureProducts) {
+                $query = "ApiMode=V"
+            }
+
+            $response = Invoke-LenovoApiRequest -Method $method -Resource $resource -Query $query
+            return $response
+        }
+        catch
+        {
+            Write-Error $Error.item(0)
+            #Log-Message $Error.item(0) Debug
+        }
+        finally
+        {}
+    }
+    End
+    {}
+}
+
+function Get-Catalog-Children
+{
+    <#
+    .PARAMETER IncludeFutureProducts
+        If ApiMode=V, results include future products.
+    
+    .EXAMPLE
+        Get-Catalog-Children -IncludeFutureProducts $true
+    #>
+
+    [CmdletBinding()]
+    param(
+        [bool]$IncludeFutureProducts,
+        [string]$ProductID
+    )
+
+    Begin
+    {}
+    Process
+    {
+        try
+        {
+            $resource += "Catalog/All"
+            if ($ProductID) {
+                $resource += "/$ProductID"
+            }
+            $method = "GET"
+            if ($IncludeFutureProducts) {
+                $query = "ApiMode=V"
+            }
+            
+            $response = Invoke-LenovoApiRequest -Method $method -Resource $resource -Query $query
+            return $response
+        }
+        catch
+        {
+            Write-Error $Error.item(0)
+            #Log-Message $Error.item(0) Debug
+        }
+        finally
+        {}
+    }
+    End
+    {}
+}
+
 #endregion Functions
 
 #region Execution
@@ -97,6 +227,26 @@ function Get-Catalog
 $response = Get-Catalog -IncludeFutureProducts $true
 $response
 #$response = Get-Catalog
+#$response
+
+$response = Get-Catalog-Raw -IncludeFutureProducts $true
+$response
+#$response = Get-Catalog-Raw
+#$response
+
+$response = Get-Catalog-All -IncludeFutureProducts $true
+$response
+#$response = Get-Catalog-All
+#$response
+
+$response = Get-Catalog-Children -IncludeFutureProducts $true
+$response
+#$response = Get-Catalog-Children
+#$response
+
+$response = Get-Catalog-Children -ProductID "CELL-PHONES" -IncludeFutureProducts $true
+$response
+#$response = Get-Catalog-Children -ProductID "CELL-PHONES"
 #$response
 
 #endregion Execution

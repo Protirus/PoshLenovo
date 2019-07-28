@@ -67,7 +67,7 @@ $warranties = Get-WarrantyByIds -Ids $WarrantyIds
 ```
 
 ```powershell
-$ContractId
+$ContractId = "#ID#"
 $contract = Get-ContractById -Id $ContractId
 ```
 
@@ -95,6 +95,44 @@ $warrantyoptions = Get-WarrantyOptionsByMachineType -MachineType $MachineType
 $MachineType = "Laptop"
 $CountryCode = "GB"
 $warrantyoptions = Get-WarrantyOptionsByMachineTypeAndCountryCode -MachineType $MachineType -CountryCode $CountryCode
+```
+
+#### Product
+
+```powershell
+$response = Get-Catalog -IncludeFutureProducts $true
+$response
+#$response = Get-Catalog
+#$response
+```
+
+```powershell
+$response = Get-Catalog-Raw -IncludeFutureProducts $true
+$response
+#$response = Get-Catalog-Raw
+#$response
+```
+
+```powershell
+$response = Get-Catalog-All -IncludeFutureProducts $true
+$response
+#$response = Get-Catalog-All
+#$response
+```
+
+```powershell
+$response = Get-Catalog-Children -IncludeFutureProducts $true
+$response
+#$response = Get-Catalog-Children
+#$response
+```
+
+```powershell
+$ProductID = "CELL-PHONES"
+$response = Get-Catalog-Children -ProductID $ProductID -IncludeFutureProducts $true
+$response
+#$response = Get-Catalog-Children -ProductID $ProductID
+#$response
 ```
 
 ---
