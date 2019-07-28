@@ -55,7 +55,7 @@ function Get-Product
         The Serial number of the machine you wish to get data about
     
     .EXAMPLE
-        Get-Product -IncludeFutureProducts $true
+        Get-Product -Serial "#SERIAL#"
     #>
 
     [CmdletBinding()]
