@@ -151,6 +151,16 @@ $response
 
 ---
 
+#### Content
+
+```powershell
+$Id = "##ID##"
+$response = Get-Content -Id $Id
+$response
+```
+
+---
+
 ### Plain Powershell Example
 
 #### Warranty
