@@ -161,6 +161,27 @@ $response
 
 ---
 
+#### Support
+
+##### Service Requests
+
+```powershell
+$ServiceRequestId = "##ServiceRequestId##"
+$Serial = "##YOUR SERIAL NUMBER##"
+$response = Get-Support-ServiceRequests -ServiceRequestId $ServiceRequestId -Serial $Serial
+$response
+```
+
+##### Service Orders
+
+```powershell
+$Serial = "##YOUR SERIAL NUMBER##"
+$response = Get-Support-ServiceOrders -Serial $Serial
+$response
+```
+
+---
+
 ### Plain Powershell Example
 
 #### Warranty
