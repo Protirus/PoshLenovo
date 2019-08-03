@@ -95,7 +95,7 @@ function Get-Part
 function Get-PartByIds
 {
   <#
-  .PARAMETER Serial
+  .PARAMETER Parts
     The Id number(s) of the parts you wish to get data about
   
   .EXAMPLE
@@ -107,7 +107,7 @@ function Get-PartByIds
     [Parameter(Mandatory=$true)]
     [string[]]$Parts
   )
-  
+
   Begin
   {}
   Process
