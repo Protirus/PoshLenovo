@@ -182,6 +182,22 @@ $response
 
 ---
 
+#### Part
+
+```powershell
+$Id = "##ID##"
+$response = Get-Part -Id "#ID#"
+$response
+```
+
+```powershell
+$Ids = @("1","2")
+$response = Get-PartByIds -Ids $Ids
+$response
+```
+
+---
+
 ### Plain Powershell Example
 
 #### Warranty
