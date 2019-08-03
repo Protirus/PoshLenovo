@@ -26,3 +26,19 @@
 
 - Product Information Endpoint(s)
   - Get-Product
+
+## [0.0.3] - 2019-08-03
+### Added
+- Product
+  - Get-Product
+
+- Content
+  - Get-Content
+
+- Support
+  - Get-Support-ServiceRequests
+  - Get-Support-ServiceOrders
+
+- Part
+  - Get-Part
+  - Get-PartByIds
