@@ -25,7 +25,7 @@
   Call '' to
 
 .FUNCTIONALITY
-   Get-Content is intended to function as a mechanism for getting Support Info from the Lenovo API.
+   Get-Support-ServiceRequest / Get-Support-ServiceOrder are intended to function as a mechanism for getting Support Info from the Lenovo API.
 #>
 
 #=================== Dependencies ==========================
