@@ -40,7 +40,7 @@
   - Get-Part
   - Get-PartByIds
 
-## [0.0.3] - 2019-08-04
+## [0.0.4] - 2019-08-04
 ### Added
 - Accessory
   - Get-Accessory
@@ -48,3 +48,5 @@
   - Get-AccessoryForProduct
   - Get-AccessoriesFromSerial
 
+- Provider
+  - Get-Provider-ServiceProviders
