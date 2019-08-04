@@ -50,3 +50,6 @@
 
 - Provider
   - Get-Provider-ServiceProviders
+
+- Contact
+  - Get-Contacts-SupportContacts

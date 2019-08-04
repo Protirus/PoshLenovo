@@ -240,6 +240,21 @@ $response
 
 ---
 
+#### Contacts
+
+```powershell
+$ProductId = "##ProductId##"
+$CountryCode = "##CountryCode##"
+$Serial = "##Serial##"
+$Coordinates = "##Coordinates##"
+$response = Get-Contacts-SupportContacts
+ -ProductId "ProductID" -CountryCode "CountryCode" -Serial "SerialNumber" -Coordinates "Coordinates"
+#$response = Get-Contacts-SupportContacts -Serial "SerialNumber"
+$response
+```
+
+---
+
 ### Plain Powershell Example
 
 #### Warranty
