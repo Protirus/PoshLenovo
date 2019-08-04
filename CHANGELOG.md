@@ -29,9 +29,6 @@
 
 ## [0.0.3] - 2019-08-03
 ### Added
-- Product
-  - Get-Product
-
 - Content
   - Get-Content
 
@@ -42,3 +39,12 @@
 - Part
   - Get-Part
   - Get-PartByIds
+
+## [0.0.3] - 2019-08-04
+### Added
+- Accessory
+  - Get-Accessory
+  - Get-AccessoryByIds
+  - Get-AccessoryForProduct
+  - Get-AccessoriesFromSerial
+

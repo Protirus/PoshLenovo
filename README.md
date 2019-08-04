@@ -198,6 +198,34 @@ $response
 
 ---
 
+#### Accessory
+
+```powershell
+$Id = "##ID##"
+$response = Get-Accessory -Id "#ID#"
+$response
+```
+
+```powershell
+$Ids = @("1","2")
+$response = Get-AccessoryByIds -Id $Ids
+$response
+```
+
+```powershell
+$ProductId = "##ProductId##"
+$response = Get-AccessoryForProduct -ProductId "#ProductId#"
+$response
+```
+
+```powershell
+$Serial = "##Serial##"
+$response = Get-AccessoriesFromSerial -Serial "#Serial#"
+$response
+```
+
+---
+
 ### Plain Powershell Example
 
 #### Warranty
