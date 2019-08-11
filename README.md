@@ -255,6 +255,38 @@ $response
 
 ---
 
+#### Case
+
+```powershell
+$Id = "##ID##"
+$response = Get-Case -Id "#ID#"
+$response
+```
+
+```powershell
+$Ids = @("1","2")
+$response = Get-CasesByIds -Id $Ids
+$response
+```
+
+```powershell
+$response = New-Case -Case @{}
+$response
+```
+
+---
+
+#### Profile Data
+
+```powershell
+$type = "eSupport.Domain.Profile+Personal"
+#$type = "eSupport.Domain"
+$response = Get-Profile -Type $type
+$response
+```
+
+---
+
 ### Plain Powershell Example
 
 #### Warranty

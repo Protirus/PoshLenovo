@@ -53,3 +53,13 @@
 
 - Contact
   - Get-Contacts-SupportContacts
+
+## [0.0.5] - 2019-08-11
+### Added
+- Case
+  - Get-Case
+  - Get-CasesByIds
+  - New-Case
+
+- Profile
+  - Get-Profile
