@@ -35,6 +35,12 @@ $lenovoApiKey = "##ADD YOUR API KEY HERE##"
 $global:ApiKey = [Environment]::GetEnvironmentVariable($lenovoApiKeyName, "Machine")
 ```
 
+```powershell
+#Log File Info
+$LogFilePath = $PSScriptRoot
+$LogFile = $LogFilePath + "\" + $MyInvocation.MyCommand.Name + "_" + (Get-Date -Format yyyy-MM-dd) + ".log"
+```
+
 #### Warranty
 
 ```powershell
