@@ -2,9 +2,9 @@
 
 ![Language: PowerShell](https://img.shields.io/badge/language-powershell-blue.svg)
 ![Tag: Lenovo](https://img.shields.io/badge/tag-lenovo-red.svg)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) | [![GitHub contributors](https://img.shields.io/github/contributors/AlexHedley/PoshLenovo.svg)](https://GitHub.com/AlexHedley/PoshLenovo/graphs/contributors/)
-[![GitHub issues](https://img.shields.io/github/issues/AlexHedley/PoshLenovo.svg)](https://GitHub.com/AlexHedley/PoshLenovo/issues/)
-[![GitHub issues-closed](https://img.shields.io/github/issues-closed/AlexHedley/PoshLenovo.svg)](https://GitHub.com/AlexHedley/PoshLenovo/issues?q=is%3Aissue+is%3Aclosed) | [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) | [![GitHub contributors](https://img.shields.io/github/contributors/AlexHedley/PoshLenovo.svg)](https://GitHub.com/Protirus/PoshLenovo/graphs/contributors/)
+[![GitHub issues](https://img.shields.io/github/issues/Protirus/PoshLenovo.svg)](https://GitHub.com/AlexHedley/PoshLenovo/issues/)
+[![GitHub issues-closed](https://img.shields.io/github/issues-closed/Protirus/PoshLenovo.svg)](https://GitHub.com/AlexHedley/PoshLenovo/issues?q=is%3Aissue+is%3Aclosed) | [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 
 A PowerShell module for [Lenovo](https://www.lenovo.com/gb/en/) API.
@@ -16,6 +16,15 @@ The [eSupport WebAPI](http://supportapi.lenovo.com/Documentation/Index.html) Doc
 ---
 
 You will need to contact either contact your 'Lenovo Account Representative' or maybe the 'Lenovo Partner Program': http://www.lenovo.com/partners/ to obtain a "ClientId".
+
+---
+
+## Module Build Status
+
+| Branch | AzurePipelines CI                              |
+|--------|------------------------------------------------|
+| dev    | ![Azure Build Status: Dev][ap-image-dev]       |
+| master | ![Azure Build Status: Master][ap-image-master] |
 
 ---
 
@@ -41,6 +50,8 @@ $LogFilePath = $PSScriptRoot
 $LogFile = $LogFilePath + "\" + $MyInvocation.MyCommand.Name + "_" + (Get-Date -Format yyyy-MM-dd) + ".log"
 ```
 
+---
+
 #### Warranty
 
 ```powershell
@@ -64,7 +75,7 @@ $warranties = Get-WarrantyByIds -Ids $WarrantyIds
 ```
 
 ```powershell
-$ContractId
+$ContractId = "#ID#"
 $contract = Get-ContractById -Id $ContractId
 ```
 
@@ -92,6 +103,192 @@ $warrantyoptions = Get-WarrantyOptionsByMachineType -MachineType $MachineType
 $MachineType = "Laptop"
 $CountryCode = "GB"
 $warrantyoptions = Get-WarrantyOptionsByMachineTypeAndCountryCode -MachineType $MachineType -CountryCode $CountryCode
+```
+
+---
+
+#### Catalog
+
+```powershell
+$response = Get-Catalog -IncludeFutureProducts $true
+$response
+#$response = Get-Catalog
+#$response
+```
+
+```powershell
+$response = Get-Catalog-Raw -IncludeFutureProducts $true
+$response
+#$response = Get-Catalog-Raw
+#$response
+```
+
+```powershell
+$response = Get-Catalog-All -IncludeFutureProducts $true
+$response
+#$response = Get-Catalog-All
+#$response
+```
+
+```powershell
+$response = Get-Catalog-Children -IncludeFutureProducts $true
+$response
+#$response = Get-Catalog-Children
+#$response
+```
+
+```powershell
+$ProductID = "CELL-PHONES"
+$response = Get-Catalog-Children -ProductID $ProductID -IncludeFutureProducts $true
+$response
+#$response = Get-Catalog-Children -ProductID $ProductID
+#$response
+```
+
+---
+
+#### Product
+
+```powershell
+$Serial = "##YOUR SERIAL NUMBER##"
+$response = Get-Product -Serial $Serial
+$response
+```
+
+---
+
+#### Content
+
+```powershell
+$Id = "##ID##"
+$response = Get-Content -Id $Id
+$response
+```
+
+---
+
+#### Support
+
+##### Service Requests
+
+```powershell
+$ServiceRequestId = "##ServiceRequestId##"
+$Serial = "##YOUR SERIAL NUMBER##"
+$response = Get-Support-ServiceRequests -ServiceRequestId $ServiceRequestId -Serial $Serial
+$response
+```
+
+##### Service Orders
+
+```powershell
+$Serial = "##YOUR SERIAL NUMBER##"
+$response = Get-Support-ServiceOrders -Serial $Serial
+$response
+```
+
+---
+
+#### Part
+
+```powershell
+$Id = "##ID##"
+$response = Get-Part -Id "#ID#"
+$response
+```
+
+```powershell
+$Ids = @("1","2")
+$response = Get-PartByIds -Ids $Ids
+$response
+```
+
+---
+
+#### Accessory
+
+```powershell
+$Id = "##ID##"
+$response = Get-Accessory -Id "#ID#"
+$response
+```
+
+```powershell
+$Ids = @("1","2")
+$response = Get-AccessoryByIds -Id $Ids
+$response
+```
+
+```powershell
+$ProductId = "##ProductId##"
+$response = Get-AccessoryForProduct -ProductId "#ProductId#"
+$response
+```
+
+```powershell
+$Serial = "##Serial##"
+$response = Get-AccessoriesFromSerial -Serial "#Serial#"
+$response
+```
+
+---
+
+#### Provider
+
+```powershell
+$ProductId = "##ProductId##"
+$CountryCode = "##CountryCode##"
+$Serial = "##Serial##"
+$Coordinates = "##Coordinates##"
+$response = Get-Provider-ServiceProviders -ProductId "ProductID" -CountryCode "CountryCode" -Serial "SerialNumber" -Coordinates "Coordinates"
+#$response = Get-Provider-ServiceProviders -Serial "SerialNumber"
+$response
+```
+
+---
+
+#### Contacts
+
+```powershell
+$ProductId = "##ProductId##"
+$CountryCode = "##CountryCode##"
+$Serial = "##Serial##"
+$Coordinates = "##Coordinates##"
+$response = Get-Contacts-SupportContacts
+ -ProductId "ProductID" -CountryCode "CountryCode" -Serial "SerialNumber" -Coordinates "Coordinates"
+#$response = Get-Contacts-SupportContacts -Serial "SerialNumber"
+$response
+```
+
+---
+
+#### Case
+
+```powershell
+$Id = "##ID##"
+$response = Get-Case -Id "#ID#"
+$response
+```
+
+```powershell
+$Ids = @("1","2")
+$response = Get-CasesByIds -Id $Ids
+$response
+```
+
+```powershell
+$response = New-Case -Case @{}
+$response
+```
+
+---
+
+#### Profile Data
+
+```powershell
+$type = "eSupport.Domain.Profile+Personal"
+#$type = "eSupport.Domain"
+$response = Get-Profile -Type $type
+$response
 ```
 
 ---
@@ -132,3 +329,13 @@ Terminal (Mac)
 - https://pcsupport.lenovo.com/gb/en/warrantylookup/batchquery
 
 There are also a number of scripts which post data to the above website but the API is a cleaner way to do this.
+
+## Links
+
+- [GitHub Repository](https://github.com/Protirus/PoshLenovo)
+- [Website](https://www.protirus.com/)
+
+[ap-image-dev]: https://protirus.visualstudio.com/PoshLenovo/_apis/build/status/Protirus.PoshLenovo?branchName=dev
+[ap-site-dev]: https://dev.azure.com/dscottraynsford/GitHub/_build/latest?definitionId=4
+[ap-image-master]: https://protirus.visualstudio.com/PoshLenovo/_apis/build/status/Protirus.PoshLenovo?branchName=master
+[ap-site-master]: https://dev.azure.com/dscottraynsford/GitHub/_build/latest?definitionId=4
