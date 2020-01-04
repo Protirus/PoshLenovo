@@ -12,7 +12,7 @@
  | 
 [![downloads](https://img.shields.io/powershellgallery/dt/PoshLenovo.svg?label=downloads)](https://www.powershellgallery.com/packages/PoshLenovo)
 
-A PowerShell module for [Lenovo](https://www.lenovo.com/gb/en/) API.
+A PowerShell module for [Lenovo](https://www.lenovo.com/gb/en/) API. Currently supports v**2.5**.
 
 ---
 
