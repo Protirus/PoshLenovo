@@ -6,6 +6,9 @@
 [![GitHub issues](https://img.shields.io/github/issues/Protirus/PoshLenovo.svg)](https://GitHub.com/AlexHedley/PoshLenovo/issues/)
 [![GitHub issues-closed](https://img.shields.io/github/issues-closed/Protirus/PoshLenovo.svg)](https://GitHub.com/AlexHedley/PoshLenovo/issues?q=is%3Aissue+is%3Aclosed) | [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
+[![powershellgallery](https://img.shields.io/powershellgallery/v/PoshLenovo.svg)](https://www.powershellgallery.com/packages/PoshLenovo)
+ | 
+[![downloads](https://img.shields.io/powershellgallery/dt/PoshLenovo.svg?label=downloads)](https://www.powershellgallery.com/packages/PoshLenovo)
 
 A PowerShell module for [Lenovo](https://www.lenovo.com/gb/en/) API.
 
