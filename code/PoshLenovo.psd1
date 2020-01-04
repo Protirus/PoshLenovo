@@ -24,10 +24,10 @@ GUID = 'a189f5c9-1e3c-40a0-3874-af5dd0e74610'
 Author = 'Alex Hedley'
 
 # Company or vendor of this module
-CompanyName = '' #Alex Hedley
+CompanyName = 'Protirus UK Ltd' #Alex Hedley
 
 # Copyright statement for this module
-Copyright = '(c) 2019 Alex Hedley. All rights reserved.'
+Copyright = '(c) 2019 Protirus UK Ltd. All rights reserved.'
 
 # Description of the functionality provided by this module
 Description = 'Powershell interface for Lenovo API'
@@ -108,23 +108,23 @@ PrivateData = @{
         Tags = @('Lenovo')
 
         # A URL to the license for this module.
-        LicenseUri = 'https://github.com/AlexHedley/PoshLenovo/blob/master/LICENSE'
+        LicenseUri = 'https://github.com/Protirus/PoshLenovo/blob/master/LICENSE'
 
         # A URL to the main website for this project.
-        ProjectUri = 'https://github.com/AlexHedley/PoshLenovo/'
+        ProjectUri = 'https://github.com/Protirus/PoshLenovo/'
 
         # A URL to an icon representing this module.
-        # IconUri = ''
+        IconUri = 'https://raw.githubusercontent.com/Protirus/PoshLenovo/master/icon.png'
 
         # ReleaseNotes of this module
-        ReleaseNotes = 'https://github.com/AlexHedley/PoshLenovo/blob/master/CHANGELOG.md'
+        ReleaseNotes = 'https://github.com/Protirus/PoshLenovo/blob/master/CHANGELOG.md'
 
     } # End of PSData hashtable
 
 } # End of PrivateData hashtable
 
 # HelpInfo URI of this module
-# HelpInfoURI = ''
+# HelpInfoURI = 'https://github.com/Protirus/PoshLenovo/blob/master/code/en-US/PoshLenovo-help.xml'
 
 # Default prefix for commands exported from this module. Override the default prefix using Import-Module -Prefix.
 # DefaultCommandPrefix = ''
