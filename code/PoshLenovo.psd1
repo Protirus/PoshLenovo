@@ -114,8 +114,8 @@ PrivateData = @{
         ProjectUri = 'https://github.com/Protirus/PoshLenovo/'
 
         # A URL to an icon representing this module.
-        IconUri = 'https://raw.githubusercontent.com/Protirus/PoshLenovo/master/icon.png'
-
+        IconUri = 'https://raw.githubusercontent.com/Protirus/PoshLenovo/master/assets/PoshLenovoLogo-square.png'
+        
         # ReleaseNotes of this module
         ReleaseNotes = 'https://github.com/Protirus/PoshLenovo/blob/master/CHANGELOG.md'
 
